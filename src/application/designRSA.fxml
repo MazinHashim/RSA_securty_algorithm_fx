@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.designRSAController">
+   <children>
+      <AnchorPane layoutX="12.0" layoutY="10.0" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="400.0" prefWidth="726.0" style="-fx-background-color: #20120F;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <JFXButton layoutX="688.0" onAction="#closeWindow" ripplerFill="#20120f" text="X" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+            <AnchorPane fx:id="enPane" layoutX="385.0" layoutY="40.0" prefHeight="325.0" prefWidth="285.0" style="-fx-background-color: #9c2b27;">
+               <children>
+                  <JFXTextField fx:id="encrytext" focusColor="#6d7fb5" layoutX="31.0" layoutY="30.0" prefHeight="25.0" prefWidth="222.0" promptText="Enter Encryption key" style="-fx-prompt-text-fill: white; -fx-text-fill: white;" unFocusColor="#c3b7b7">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton layoutX="31.0" layoutY="284.0" onAction="#encryptionAction" prefHeight="25.0" prefWidth="230.0" style="-fx-background-color: #e45652;" text="Encryption" textFill="WHITE" />
+                  <JFXTextArea fx:id="encryArea" editable="false" focusColor="#6d7fb5" layoutX="31.0" layoutY="69.0" prefHeight="185.0" prefWidth="230.0" promptText="The content of the file will display here" style="-fx-prompt-text-fill: white; -fx-text-fill: white;" unFocusColor="#c3b7b7">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextArea>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="dePane" layoutX="385.0" layoutY="40.0" prefHeight="325.0" prefWidth="285.0" style="-fx-background-color: #9c2b27;" visible="false">
+               <children>
+                  <JFXTextField fx:id="decrytext" focusColor="#6d7fb5" layoutX="31.0" layoutY="30.0" prefHeight="25.0" prefWidth="222.0" promptText="Enter Decryption key" style="-fx-prompt-text-fill: white; -fx-text-fill: white;" unFocusColor="#c3b7b7">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton layoutX="31.0" layoutY="284.0" onAction="#decryptionAction" prefHeight="25.0" prefWidth="230.0" style="-fx-background-color: #e45652;" text="Decryption" textFill="WHITE" />
+                  <JFXTextArea fx:id="decryArea" editable="false" focusColor="#6d7fb5" layoutX="31.0" layoutY="69.0" prefHeight="185.0" prefWidth="230.0" promptText="The content of the file will display here" style="-fx-prompt-text-fill: white; -fx-text-fill: white;" unFocusColor="#c3b7b7">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextArea>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="402.0" fitWidth="338.0" layoutX="-3.0" opacity="0.21">
+               <image>
+                  <Image url="@elec6.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="47.0" layoutY="154.0" style="-fx-text-fill: #e45652;" text="Wellcome to RSA Cipher" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label layoutX="57.0" layoutY="186.0" prefHeight="82.0" prefWidth="268.0" text="Rivest–Shamir–Adleman&#10;is one of the first public-key cryptosystems&#10;and is widely used for secure&#10;data transmission" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <JFXButton layoutX="57.0" layoutY="287.0" onAction="#encryptionPane" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #e45652;" text="Encryption" textFill="WHITE">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXButton>
+            <JFXButton layoutX="176.0" layoutY="287.0" onAction="#decryptionPane" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #e45652;" text="Decryption" textFill="WHITE">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
